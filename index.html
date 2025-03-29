@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download and Close</title>
+    <script>
+        window.onload = function() {
+            var link = document.createElement("a");
+            link.href = "file:///D:/Qnotes-20250317T114232Z-001/Qnotes/1.0.1.0/Setup_Qnotes%201.0.1.0.exe";  // Path to your file
+            link.download = "Setup_Qnotes 1.0.0.9.html";   // File name
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            // Close tab after download
+            setTimeout(() => {
+                window.close();
+            }, 1000);  // Delay to allow download
+        };
+    </script>
+</head>
+<body>
+    <h2>Your download will start now...</h2>
+</body>
+</html>
